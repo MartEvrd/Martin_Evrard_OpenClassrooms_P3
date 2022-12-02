@@ -1,2 +1,9 @@
 .DS_Store
 *.pdf
+package-lock.json
+/node_modules
+/css/style_test.css
+/css/style.css.map
+/css/style.min.css
+/css/style.min.css.map
+/css/style.prefix.css

@@ -1,0 +1,24 @@
+.article {
+  background-color: white;
+}
+.article__heading {
+  color: black;
+}
+.article__heading--orange {
+  color: #cc8624;
+}
+.article__heading--rose {
+  color: #cc2475;
+}
+.article__heading--bleu {
+  color: #2469cc;
+}
+.article__heading--vert {
+  color: #24cc24;
+}
+
+.test {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

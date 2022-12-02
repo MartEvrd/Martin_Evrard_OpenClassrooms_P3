@@ -1,0 +1,29 @@
+{
+  "name": "openclassrooms_p3",
+  "version": "1.0.0",
+  "description": "Ohmyfood - Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss:css/style.css --style expanded",
+    "prefix": "postcss --use autoprefixer -b \"last 10 versions\" css/style.css -o css/style.prefix.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartEvrd/Martin_Evrard_OpenClassrooms_P3.git"
+  },
+  "author": "Martin_Evrard",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/MartEvrd/Martin_Evrard_OpenClassrooms_P3/issues"
+  },
+  "homepage": "https://github.com/MartEvrd/Martin_Evrard_OpenClassrooms_P3#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "npm": "^9.1.3",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.56.1",
+    "update": "^0.4.2"
+  }
+}
