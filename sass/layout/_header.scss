@@ -1,0 +1,23 @@
+header{
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    a{
+        position: absolute;
+        left: 15px;
+        .home-button{
+            color: #000000;
+            &--hidden{
+                display: none;
+            }
+        }
+    }
+    .logo{
+        margin: 0 auto;
+        position: static;
+    }
+}
+
+

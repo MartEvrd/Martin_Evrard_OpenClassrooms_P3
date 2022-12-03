@@ -1,0 +1,8 @@
+@mixin font-package($weight: 400, $size: 1.8, $family: null, $color: #000000){
+    @if ($family == header) {
+        font: $weight #{$size}rem 'Shrikhand', Arial, Verdana, sans-serif ;
+    }@else{
+        font: $weight #{$size}rem 'Raleway', Arial, Verdana, sans-serif ;
+    }
+    color: $color;
+}

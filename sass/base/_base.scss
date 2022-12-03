@@ -1,0 +1,12 @@
+html{
+    font-size: 62.5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+body{
+    margin: 0 auto;
+    background-color: #ffffff;
+    @include font-package();
+}
+

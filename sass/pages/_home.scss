@@ -1,0 +1,20 @@
+.location-bloc{
+    height: 70px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 25px 150px 25px;
+    background-color: darken($color-bg-alternative, 5%);
+    box-shadow: inset 0 5px 5px -3px darken($color-bg-alternative, 20%);
+    @include font-package($weight: 600);
+    &__icon{
+        align-self: center;
+    }
+    &__city{
+        justify-self: center;
+        align-self: center;
+        //  position: fixed;
+        // left: calc((100% - 130px) / 2);
+    }   
+}
