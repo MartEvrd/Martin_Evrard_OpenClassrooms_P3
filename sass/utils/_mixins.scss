@@ -2,7 +2,7 @@
     @if ($family == header) {
         font: $weight #{$size}rem 'Shrikhand', Arial, Verdana, sans-serif ;
     }@else{
-        font: $weight #{$size}rem 'Raleway', Arial, Verdana, sans-serif ;
+        font: $weight #{$size}rem 'Roboto', Arial, Verdana, sans-serif ;
     }
     color: $color;
 }

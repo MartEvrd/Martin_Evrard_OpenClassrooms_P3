@@ -7,7 +7,7 @@
     grid-template-columns: 25px 150px 25px;
     background-color: darken($color-bg-alternative, 5%);
     box-shadow: inset 0 5px 5px -3px darken($color-bg-alternative, 20%);
-    @include font-package($weight: 600);
+    @include font-package($weight: 500);
     &__icon{
         align-self: center;
     }
@@ -17,4 +17,30 @@
         //  position: fixed;
         // left: calc((100% - 130px) / 2);
     }   
+}
+
+.welcome-bloc{
+    min-height: 240px;
+    margin: 0 auto;
+    padding: 30px 30px 40px;
+    background-color: $color-bg-alternative;
+    text-align: center;
+    @include font-package($weight: 300);
+    &__header{
+        @include font-package($weight: 700, $size: 3);
+        margin-bottom: 20px;
+    }
+    &__button{
+        margin: 30px auto 0px;
+        width: 240px;
+        height: 55px;
+        background-color: $color-primary;
+        border-radius: 55px / 55px;
+        @include font-package($weight: 500, $color: #FFFFFF);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // TODO -- Mettre en place le dégradé sur le bouton
+    }
+
 }
