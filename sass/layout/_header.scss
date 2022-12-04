@@ -4,14 +4,12 @@ header{
     position: relative;
     display: flex;
     align-items: center;
-    a{
+    .home-button{
         position: absolute;
-        left: 15px;
-        .home-button{
-            color: #000000;
-            &--hidden{
-                display: none;
-            }
+        left: 25px;
+        color: #000000;
+        &--hidden{
+            display: none;
         }
     }
     .logo{

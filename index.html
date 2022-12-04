@@ -27,7 +27,7 @@
 
     <header>
             <a href="../index.html"><i class="fa-solid fa-arrow-left fa-xl home-button home-button--hidden"></i></a>
-            <img src="./img/logo/ohmyfood@2x.svg" alt="ohmyfood_logo" class="logo">
+            <a href="./index.html" class="logo"><img src="./img/logo/ohmyfood@2x.svg" alt="ohmyfood_logo"></a>
     </header>
 
     <main>
@@ -39,15 +39,54 @@
                 <span>Paris, Belleville</span>
             </div>
         </div>
-        <!-- TODO -- Rajouter un lien sur le logo pour en faire un bouton de retour au menu principal  -->
         
+        <!-- TODO -- Rajouter un lien pour faire une ancre sur la partie des restaurants -->
         <section class="welcome-bloc">
             <h1 class="welcome-bloc__header">Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <div class="welcome-bloc__button">
-                <!-- TODO -- Rajouter un lien pour faire une ancre sur la partie des restaurants -->
-                <a href="./html/restpage-a-la-francaise.html" class="welcome-bloc__button-txt"> <span>Explorer nos restaurants</span></a>
+                <a href="#restaurant-section" class="welcome-bloc__button-txt"> <span>Explorer nos restaurants</span></a>
             </div>
+        </section>
+
+        <section class="explain-bloc">
+            <h2 class="explain-bloc__header">Fonctionnement</h2>
+            <div class="explain-bloc__cards-list">
+                <!-- "Choisissez un restaurant" -->
+                <div class="explain-bloc__card">
+                    <div class="explain-bloc__card-num">
+                        <span>1</span>
+                    </div>
+                    <div class="explain-bloc__card-icon">
+                        <i class="fa-solid fa-mobile-screen fa-lg"></i>
+                    </div>
+                    <span class="explain-bloc__card-txt">Choisissez un restaurant</span>
+                </div>
+                <!-- "Composez votre menu" -->
+                <div class="explain-bloc__card">
+                    <div class="explain-bloc__card-num">
+                        <span>2</span>
+                    </div>
+                    <div class="explain-bloc__card-icon">
+                        <i class="fa-sharp fa-solid fa-list-ul fa-lg"></i>
+                    </div>
+                    <span class="explain-bloc__card-txt">Composez votre menu</span>
+                </div>
+                <!-- "Dégustez au restaurant" -->
+                <div class="explain-bloc__card explain-bloc__card--highlight">
+                    <div class="explain-bloc__card-num">
+                        <span>3</span>
+                    </div>
+                    <div class="explain-bloc__card-icon explain-bloc__card-icon--highlight">
+                        <i class="fa-solid fa-store fa-lg"></i>
+                    </div>
+                    <span class="explain-bloc__card-txt">Dégustez au restaurant</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="restaurant-bloc" id="restaurant-section">
+            <h2 class="restaurant-bloc__header">Restaurants</h2>
         </section>
 
     </main>

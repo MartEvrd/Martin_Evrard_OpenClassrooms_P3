@@ -21,8 +21,7 @@
 
 .welcome-bloc{
     min-height: 240px;
-    margin: 0 auto;
-    padding: 30px 30px 40px;
+    @include global-section-positionning;
     background-color: $color-bg-alternative;
     text-align: center;
     @include font-package($weight: 300);
@@ -34,13 +33,36 @@
         margin: 30px auto 0px;
         width: 240px;
         height: 55px;
-        background-color: $color-primary;
+        background-color: $color-secondary;
         border-radius: 55px / 55px;
         @include font-package($weight: 500, $color: #FFFFFF);
         display: flex;
         justify-content: center;
         align-items: center;
-        // TODO -- Mettre en place le dégradé sur le bouton
+        box-shadow: inset 0px -30px 70px -20px $color-primary, rgba(0, 0, 0, 0.5) 0px 8px 15px -6px;
     }
+}
 
+.explain-bloc{
+    @include global-section-positionning;
+    &__header{
+        @include font-package($weight: 700, $size: 3);
+        padding-bottom: 20px;
+    }
+    &__cards-list{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 25px;
+    }
+}
+
+// TODO A REPRENDRE
+.restaurant-bloc{
+    @include global-section-positionning;
+    background-color: $color-bg-alternative;
+    &__header{
+        @include font-package($weight: 700, $size: 3);
+        padding-bottom: 20px;
+    }
 }

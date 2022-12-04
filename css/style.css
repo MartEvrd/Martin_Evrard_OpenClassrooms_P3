@@ -58,6 +58,48 @@ body {
   color: #000000;
 }
 
+.explain-bloc__card {
+  height: 90px;
+  width: calc(100% - 15px);
+  font: 500 1.8rem "Roboto", Arial, Verdana, sans-serif;
+  color: #000000;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 15px 1px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 10px 70px calc(100% - 80px);
+  justify-items: center;
+  align-items: center;
+}
+.explain-bloc__card--highlight {
+  background-color: hsl(267.3134328358deg, 100%, 95%);
+}
+.explain-bloc__card-num {
+  background-color: #9356DC;
+  font: 400 1.7rem "Roboto", Arial, Verdana, sans-serif;
+  color: #FFFFFF;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 5px;
+}
+.explain-bloc__card-icon {
+  color: #717171;
+}
+.explain-bloc__card-icon--highlight {
+  color: #9356DC;
+}
+.explain-bloc__card-txt {
+  justify-self: flex-start;
+  align-self: center;
+  overflow: visible;
+}
+
 header {
   width: 100%;
   margin: 30px auto;
@@ -65,14 +107,12 @@ header {
   display: flex;
   align-items: center;
 }
-header a {
+header .home-button {
   position: absolute;
-  left: 15px;
-}
-header a .home-button {
+  left: 25px;
   color: #000000;
 }
-header a .home-button--hidden {
+header .home-button--hidden {
   display: none;
 }
 header .logo {
@@ -103,7 +143,7 @@ header .logo {
 .welcome-bloc {
   min-height: 240px;
   margin: 0 auto;
-  padding: 30px 30px 40px;
+  padding: 35px 30px 50px 30px;
   background-color: #f6f6f6;
   text-align: center;
   font: 300 1.8rem "Roboto", Arial, Verdana, sans-serif;
@@ -118,11 +158,39 @@ header .logo {
   margin: 30px auto 0px;
   width: 240px;
   height: 55px;
-  background-color: #9356DC;
+  background-color: #FF79DA;
   border-radius: 55px/55px;
   font: 500 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0px -30px 70px -20px #9356DC, rgba(0, 0, 0, 0.5) 0px 8px 15px -6px;
+}
+
+.explain-bloc {
+  margin: 0 auto;
+  padding: 35px 30px 50px 30px;
+}
+.explain-bloc__header {
+  font: 700 3rem "Roboto", Arial, Verdana, sans-serif;
+  color: #000000;
+  padding-bottom: 20px;
+}
+.explain-bloc__cards-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 25px;
+}
+
+.restaurant-bloc {
+  margin: 0 auto;
+  padding: 35px 30px 50px 30px;
+  background-color: #f6f6f6;
+}
+.restaurant-bloc__header {
+  font: 700 3rem "Roboto", Arial, Verdana, sans-serif;
+  color: #000000;
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

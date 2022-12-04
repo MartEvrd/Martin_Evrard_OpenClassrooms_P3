@@ -1,0 +1,40 @@
+.explain-bloc__card{
+    height: 90px;
+    // Mesure permettant de redéfinir la dimension de la card, afin de permettre l'alignement gauche de la bulle numérotée, décalée de 5px vers la gauche par sa position relative.
+    width: calc(100% - 15px);
+    @include font-package($weight: 500);
+    background-color: $color-bg-alternative;
+    border-radius: 25px;
+    box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px 1px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 10px 70px calc(100% - 80px);
+    justify-items: center;
+    align-items: center;
+    &--highlight{
+        background-color: hsl(hue($color-primary), 100%, 95%);
+    }
+    &-num{
+        background-color: $color-primary;
+        @include font-package($size: 1.7, $color: #FFFFFF);
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 5px;
+    }
+    &-icon{
+        color: darken($color-bg-alternative, 52%);
+        &--highlight{
+            color: $color-primary;
+        }
+    }
+    &-txt{
+        justify-self: flex-start;
+        align-self: center;
+        overflow: visible;
+    }
+}

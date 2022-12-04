@@ -6,3 +6,8 @@
     }
     color: $color;
 }
+
+@mixin global-section-positionning($top: $general-top-padding, $right: $general-right_left-padding,$bottom: $general-bottom-padding, $left: $general-right_left-padding) {
+    margin: 0 auto;
+    padding: $top $right $bottom $left;
+}
