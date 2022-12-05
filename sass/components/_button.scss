@@ -1,0 +1,16 @@
+.welcome-bloc__button{
+    margin: 30px auto 0px;
+    width: 240px;
+    height: 55px;
+    background-color: $color-secondary;
+    border-radius: 55px / 55px;
+    @include font-package($weight: 500, $color: #FFFFFF);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px -30px 70px -20px $color-primary, rgba(0, 0, 0, 0.5) 0px 8px 15px -6px;
+    &:hover{
+        background-color: hsl(hue($color-secondary), 100%, lightness($color-secondary) + 6%);
+        box-shadow:inset 0px -30px 70px -20px hsl(hue($color-primary), 100%, lightness($color-primary) + 6%), rgba(0, 0, 0, 0.5) 0px 8px 15px 2px;
+    }
+}

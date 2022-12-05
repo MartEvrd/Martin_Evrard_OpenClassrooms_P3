@@ -1,0 +1,25 @@
+footer{
+    @include global-section-positionning;
+    background-color: $color-bg-footer;
+    @include font-package($size: 1.6, $color: #FFFFFF);
+    .footer__header{
+        @include font-package($family: header, $color: #FFFFFF);
+    }
+    .footer__list{
+        margin-top: 15px;
+        &-icon{
+            min-width: 25px;
+        }
+        &-link{
+            padding-bottom: 10px;
+            cursor: pointer;
+            &--top{
+                font-weight: 700;
+            }
+            &:hover{
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+            }
+        }
+    }
+}

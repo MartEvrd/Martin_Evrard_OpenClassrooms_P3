@@ -1,0 +1,45 @@
+.restaurant-bloc__card{
+    height: 250px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
+    position: relative;
+    &:hover{
+        box-shadow:rgba(0, 0, 0, 0.5) 0px 8px 15px 1px;
+    }
+    &--new{
+        position: absolute;
+        z-index: 1;
+        top: 15px;
+        right: 15px;
+        background-color: $color-tertiary;
+        padding: 5px 15px;
+        border-radius: 5% / 20%;
+        @include font-package($weight: 500, $size: 1.7, $color: hsl(hue($color-tertiary), saturation($color-tertiary) + 20%, lightness($color-tertiary) - 40%));
+    }
+    &--old{
+        display: none;
+    }
+    &-img{
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px 25px 0px 0px;
+        position: relative;
+    }
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 10px 25px 10px 15px;
+    }
+    &-header{
+        @include font-package($weight: 700, $size: 1.9);
+        margin-bottom: 5px;
+    }
+    &-location{
+        @include font-package($size: 1.7);
+    }   
+}

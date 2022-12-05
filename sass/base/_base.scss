@@ -1,6 +1,6 @@
 html{
     font-size: 62.5%;
-    max-width: 1400px;
+    max-width: $global-page-max-width;
     margin: 0 auto;
 }
 
@@ -9,4 +9,3 @@ body{
     background-color: #ffffff;
     @include font-package();
 }
-

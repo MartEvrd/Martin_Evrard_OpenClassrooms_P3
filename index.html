@@ -26,8 +26,8 @@
 <body>
 
     <header>
-            <a href="../index.html"><i class="fa-solid fa-arrow-left fa-xl home-button home-button--hidden"></i></a>
-            <a href="./index.html" class="logo"><img src="./img/logo/ohmyfood@2x.svg" alt="ohmyfood_logo"></a>
+        <a href="../index.html"><i class="fa-solid fa-arrow-left fa-xl home-button home-button--hidden"></i></a>
+        <a href="./index.html" class="logo"><img src="./img/logo/ohmyfood@2x.svg" alt="ohmyfood_logo"></a>
     </header>
 
     <main>
@@ -39,14 +39,11 @@
                 <span>Paris, Belleville</span>
             </div>
         </div>
-        
-        <!-- TODO -- Rajouter un lien pour faire une ancre sur la partie des restaurants -->
+
         <section class="welcome-bloc">
             <h1 class="welcome-bloc__header">Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="welcome-bloc__button">
-                <a href="#restaurant-section" class="welcome-bloc__button-txt"> <span>Explorer nos restaurants</span></a>
-            </div>
+            <a href="#restaurant-section" class="welcome-bloc__button">Explorer nos restaurants</a>
         </section>
 
         <section class="explain-bloc">
@@ -87,12 +84,82 @@
 
         <section class="restaurant-bloc" id="restaurant-section">
             <h2 class="restaurant-bloc__header">Restaurants</h2>
-        </section>
+            <div class="restaurant-bloc__cards-list">
 
+                <!-- "La palette du goût" -->
+                <a href="html/restpage-palette-gout.html" class="restaurant-bloc__card">
+                    <img src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurant-bloc__card-img" alt="La palette du goût">
+                    <span class="restaurant-bloc__card--new">Nouveau</span>
+
+                    <div class="restaurant-bloc__card-content">
+                        <div class="restaurant-bloc__card-txt">
+                            <h3 class="restaurant-bloc__card-header">La palette du goût</h3>
+                            <span class="restaurant-bloc__card-location">Ménilmontant</span>
+                        </div>
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                    </div>
+                </a>
+
+                <!-- "La note enchantée" -->
+                <a href="html/restpage-note-enchantee.html" class="restaurant-bloc__card">
+                    <img src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="restaurant-bloc__card-img" alt="La note enchantée">
+                    <span class="restaurant-bloc__card--new">Nouveau</span>
+
+                    <div class="restaurant-bloc__card-content">
+                        <div class="restaurant-bloc__card-txt">
+                            <h3 class="restaurant-bloc__card-header">La note enchantée</h3>
+                            <span class="restaurant-bloc__card-location">Charonne</span>
+                        </div>
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                    </div>
+                </a>
+
+                <!-- "À la française" -->
+                <a href="html/restpage-a-la-francaise.html" class="restaurant-bloc__card">
+                    <img src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="restaurant-bloc__card-img" alt="À la française">
+                    <span class="restaurant-bloc__card--old">Nouveau</span>
+
+                    <div class="restaurant-bloc__card-content">
+                        <div class="restaurant-bloc__card-txt">
+                            <h3 class="restaurant-bloc__card-header">À la française</h3>
+                            <span class="restaurant-bloc__card-location">Cité Rouge</span>
+                        </div>
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                    </div>
+                </a>
+
+                <!-- "Le délice des sens" -->
+                <a href="html/restpage-delice-sens.html" class="restaurant-bloc__card">
+                    <img src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="restaurant-bloc__card-img" alt="Le délice des sens">
+                    <span class="restaurant-bloc__card--old">Nouveau</span>
+
+                    <div class="restaurant-bloc__card-content">
+                        <div class="restaurant-bloc__card-txt">
+                            <h3 class="restaurant-bloc__card-header">Le délice des sens</h3>
+                            <span class="restaurant-bloc__card-location">Folie-Méricourt</span>
+                        </div>
+                        <i class="fa-regular fa-heart fa-xl"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <span class="footer__header">ohmyfood</span>
 
+        <ul class="footer__list">
+            <li class="footer__list-link footer__list-link--top">
+                <i class="fa-solid fa-utensils footer__list-icon"></i>
+                <a href="">Proposer un restaurant</a>
+            </li>
+            <li class="footer__list-link footer__list-link--top">
+                <i class="fa-solid fa-handshake-angle footer__list-icon"></i>
+                <a href="">Devenir partenaire</a>
+            </li>
+            <li class="footer__list-link"><a href="">Mentions légales</a></li>
+            <li class="footer__list-link"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
     </footer>
 
 </body>
