@@ -1,11 +1,11 @@
 html{
-    font-size: 62.5%;
+    font-size: $font-standard-proportions;
     max-width: $global-page-max-width;
     margin: 0 auto;
 }
 
 body{
     margin: 0 auto;
-    background-color: #ffffff;
-    @include font-package();
+    background-color: $color-bg-standard;
+    @include font-package(standard);
 }

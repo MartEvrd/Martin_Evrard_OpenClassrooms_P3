@@ -1,9 +1,9 @@
 footer{
     @include global-section-positionning;
     background-color: $color-bg-footer;
-    @include font-package($size: 1.6, $color: #FFFFFF);
+    @include font-package(footer-standard);
     .footer__header{
-        @include font-package($family: header, $color: #FFFFFF);
+        @include font-package(footer-header);
     }
     .footer__list{
         margin-top: 15px;
@@ -14,7 +14,7 @@ footer{
             padding-bottom: 10px;
             cursor: pointer;
             &--top{
-                font-weight: 700;
+                @include font-package(footer-highlight);
             }
             &:hover{
                 text-decoration: underline;

@@ -4,7 +4,7 @@
     height: 55px;
     background-color: $color-secondary;
     border-radius: 55px / 55px;
-    @include font-package($weight: 500, $color: #FFFFFF);
+    @include font-package(global-buttons);
     display: flex;
     justify-content: center;
     align-items: center;

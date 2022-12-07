@@ -1,12 +1,95 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-bg-alternative: #f6f6f6;
-$color-bg-footer: #2f2f2f;
+
+$color-bg-standard: #FFFFFF;
+$color-bg-alternative: #F6F6F6;
+$color-bg-footer: #2F2F2F;
+
+$color-font-standard: #000000;
+$color-font-secondary: #FFFFFF;
 
 $general-right_left-padding: 30px;
 $general-top-padding: 35px;
 $general-bottom-padding: 50px;
 
 $global-page-max-width: 1400px;
+
+$font-standard-proportions: 62.5%;
+$font-standard-package: (
+    weight: 300,
+    size: 1.7,
+    family: 'Roboto',
+    color: $color-font-standard
+);
+$font-package: (
+    // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$font-standard-package'
+    standard: (
+        weight: map-get($font-standard-package, weight),
+        size: map-get($font-standard-package, size),
+        family: map-get($font-standard-package, family),
+        color: map-get($font-standard-package, color),
+    ),// ! /!\ --------------------------------------------------
+    home-header: (
+        weight: 700,
+        size: 3,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-header-top: (
+        weight: 700,
+        size: 2.8,
+        family: 'Shrikhand',
+        color: $color-font-standard,
+    ),
+    restaurant-header-menu: (
+        weight: 300,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-card-header: (
+        weight: 700,
+        size: 1.9,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-highlight: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-buttons: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
+    footer-standard: (
+        weight: 400,
+        size: 1.6,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
+    footer-header: (
+        weight: 400,
+        size: 1.8,
+        family: 'Shrikhand',
+        color: $color-font-secondary,
+    ),
+    footer-highlight: (
+        weight: 700,
+        size: 1.6,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    )
+);
+
+
+
+
+
+
+
 

@@ -2,7 +2,7 @@
     height: 90px;
     // Mesure permettant de redéfinir la dimension de la card, afin de permettre l'alignement gauche de la bulle numérotée, décalée de 5px vers la gauche par sa position relative.
     width: calc(100% - 15px);
-    @include font-package($weight: 500);
+    @include font-package(global-highlight);
     background-color: $color-bg-alternative;
     border-radius: 25px;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px 1px;
@@ -16,7 +16,7 @@
     }
     &-num{
         background-color: $color-primary;
-        @include font-package($size: 1.7, $color: #FFFFFF);
+        @include font-package-specific($color: #FFFFFF);
         height: 30px;
         width: 30px;
         border-radius: 100%;

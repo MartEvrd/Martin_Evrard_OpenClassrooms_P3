@@ -1,7 +1,7 @@
 .restaurant-bloc__card{
     height: 250px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: $color-bg-standard;
     border-radius: 25px;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
     position: relative;
@@ -16,7 +16,7 @@
         background-color: $color-tertiary;
         padding: 5px 15px;
         border-radius: 5% / 20%;
-        @include font-package($weight: 500, $size: 1.7, $color: hsl(hue($color-tertiary), saturation($color-tertiary) + 20%, lightness($color-tertiary) - 40%));
+        @include font-package-specific($weight: 500, $color: hsl(hue($color-tertiary), saturation($color-tertiary) + 20%, lightness($color-tertiary) - 40%));
     }
     &--old{
         display: none;
@@ -36,10 +36,10 @@
         padding: 10px 25px 10px 15px;
     }
     &-header{
-        @include font-package($weight: 700, $size: 1.9);
+        @include font-package(global-card-header);
         margin-bottom: 5px;
     }
     &-location{
-        @include font-package($size: 1.7);
+        @include font-package(standard);
     }   
 }

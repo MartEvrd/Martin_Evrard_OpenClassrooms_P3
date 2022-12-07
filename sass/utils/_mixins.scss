@@ -1,9 +1,19 @@
-@mixin font-package($weight: 400, $size: 1.8, $family: null, $color: #000000){
+@mixin font-package--OLD($weight: 400, $size: 1.8, $family: null, $color: #000000){
     @if ($family == header) {
         font: $weight #{$size}rem 'Shrikhand', Arial, Verdana, sans-serif ;
     }@else{
         font: $weight #{$size}rem 'Roboto', Arial, Verdana, sans-serif ;
     }
+    color: $color;
+}
+
+@mixin font-package($config: standard) {
+    $package: map-get($font-package, $config);
+    font: map-get($package, weight) map-get($package, size)+rem map-get($package, family),Arial, Verdana, sans-serif;
+    color: map-get($package, color);
+}
+@mixin font-package-specific($weight: map-get($font-standard-package, weight), $size: map-get($font-standard-package, size), $family: map-get($font-standard-package, family), $color: map-get($font-standard-package, color)){
+    font: $weight #{$size}rem '#{$family}',Arial,Verdana,sans-serif; 
     color: $color;
 }
 
