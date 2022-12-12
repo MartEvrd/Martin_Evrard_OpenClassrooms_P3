@@ -11,6 +11,8 @@
     row-gap: 15px;
     &__header{
         @include font-package(global-card-header);
+        text-overflow: ellipsis;
+        // Pour rajout des "..." à la fin
     }
     &__content{
         display: flex;
