@@ -7,3 +7,5 @@ package-lock.json
 /css/style.min.css
 /css/style.min.css.map
 /css/style.prefix.css
+test.html
+style-test.css

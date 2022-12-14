@@ -11,16 +11,23 @@
     row-gap: 15px;
     &__header{
         @include font-package(global-card-header);
+        // padding-right: 50px;
         text-overflow: ellipsis;
-        // Pour rajout des "..." à la fin
+        white-space : nowrap;
+        overflow: hidden;
     }
     &__content{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &-description{
+            text-overflow: ellipsis;
+            white-space : nowrap;
+            overflow: hidden;
+        }
         &-price{
             @include font-package-specific($weight: 700, $size: 1.8);
-            padding-left: 15px;
+            padding-left: 20px;
         }
     }
 }

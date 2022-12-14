@@ -1,4 +1,4 @@
-.generic_call-to-action{
+.btn-cta{
     margin: 30px auto 0px;
     width: 240px;
     height: 55px;
@@ -12,5 +12,8 @@
     &:hover{
         background-color: hsl(hue($color-secondary), 100%, lightness($color-secondary) + 6%);
         box-shadow:inset 0px -30px 70px -20px hsl(hue($color-primary), 100%, lightness($color-primary) + 6%), rgba(0, 0, 0, 0.5) 0px 8px 15px 2px;
+    }
+    &--bottom-page{
+        margin-top: 50px;
     }
 }

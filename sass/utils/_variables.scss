@@ -22,6 +22,7 @@ $font-standard-package: (
     family: 'Roboto',
     color: $color-font-standard
 );
+
 $font-package: (
     // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$font-standard-package'
     standard: (

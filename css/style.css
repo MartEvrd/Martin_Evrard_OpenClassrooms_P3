@@ -55,7 +55,7 @@ body {
   color: #000000;
 }
 
-.welcome-bloc__button {
+.btn-cta {
   margin: 30px auto 0px;
   width: 240px;
   height: 55px;
@@ -68,9 +68,12 @@ body {
   align-items: center;
   box-shadow: inset 0px -30px 70px -20px #9356DC, rgba(0, 0, 0, 0.5) 0px 8px 15px -6px;
 }
-.welcome-bloc__button:hover {
+.btn-cta:hover {
   background-color: hsl(316.5671641791deg, 100%, 79.7254901961%);
   box-shadow: inset 0px -30px 70px -20px hsl(267.3134328358deg, 100%, 66%), rgba(0, 0, 0, 0.5) 0px 8px 15px 2px;
+}
+.btn-cta--bottom-page {
+  margin-top: 50px;
 }
 
 .explain-bloc__card {
@@ -130,16 +133,24 @@ body {
 .menu-card__header {
   font: 700 1.9rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu-card__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.menu-card__content-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .menu-card__content-price {
   font: 700 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 .restaurant-bloc__card {
@@ -201,7 +212,7 @@ header {
 }
 header .home-button {
   position: absolute;
-  left: 25px;
+  left: 30px;
   color: #000000;
 }
 header .home-button--hidden {
