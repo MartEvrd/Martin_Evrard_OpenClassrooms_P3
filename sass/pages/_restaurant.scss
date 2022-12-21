@@ -13,6 +13,7 @@
     position: relative;
     top: -50px;
     border-radius: 40px 40px 0px 0px;
+    position: relative;
     &__header{
         @include global-section-positionning($bottom: 30px);
         @include font-package(restaurant-header-top);
@@ -25,6 +26,7 @@
     }
     &__selection{
         @include global-section-positionning($top: 0);
+        position: relative;
         &-header{
             @include font-package(restaurant-header-menu);
         }
@@ -38,6 +40,7 @@
             display: flex;
             flex-direction: column;
             row-gap: 15px;
+            position: relative;
         }
     }
 }

@@ -1,5 +1,5 @@
 .menu-card{
-    min-height: 90px;
+    min-height: $menu-card-height;
     width: 100%;
     padding: 20px 40px 20px 15px;
     background-color: $color-bg-standard;
@@ -9,6 +9,8 @@
     flex-direction: column;
     justify-content: space-between;
     row-gap: 15px;
+    position: relative;
+    animation: menu-discover 1s both ease-in-out;
     &__header{
         @include font-package(global-card-header);
         // padding-right: 50px;
@@ -18,8 +20,10 @@
     }
     &__content{
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        column-gap: 15px;
+        width: auto;
         &-description{
             text-overflow: ellipsis;
             white-space : nowrap;
