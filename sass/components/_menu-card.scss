@@ -10,7 +10,11 @@
     justify-content: space-between;
     row-gap: 15px;
     position: relative;
-    animation: menu-discover 1s both ease-in-out;
+    @for $i from 1 through 4{
+        &:nth-child(#{$i}) {
+            animation: 1s ease-in-out calc(($i - 1)*.5s) both menu-discover;
+        }
+    }
     &__header{
         @include font-package(global-card-header);
         // padding-right: 50px;

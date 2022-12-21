@@ -153,8 +153,22 @@ body {
   justify-content: space-between;
   row-gap: 15px;
   position: relative;
-  -webkit-animation: menu-discover 1s both ease-in-out;
-          animation: menu-discover 1s both ease-in-out;
+}
+.menu-card:nth-child(1) {
+  -webkit-animation: 1s ease-in-out 0s both menu-discover;
+          animation: 1s ease-in-out 0s both menu-discover;
+}
+.menu-card:nth-child(2) {
+  -webkit-animation: 1s ease-in-out 0.5s both menu-discover;
+          animation: 1s ease-in-out 0.5s both menu-discover;
+}
+.menu-card:nth-child(3) {
+  -webkit-animation: 1s ease-in-out 1s both menu-discover;
+          animation: 1s ease-in-out 1s both menu-discover;
+}
+.menu-card:nth-child(4) {
+  -webkit-animation: 1s ease-in-out 1.5s both menu-discover;
+          animation: 1s ease-in-out 1.5s both menu-discover;
 }
 .menu-card__header {
   font: 700 1.9rem "Roboto", Arial, Verdana, sans-serif;
