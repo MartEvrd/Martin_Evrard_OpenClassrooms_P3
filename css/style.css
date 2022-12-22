@@ -97,8 +97,22 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes menu-check {}
-@keyframes menu-check {}
+@-webkit-keyframes menu-check {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes menu-check {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+  }
+}
 .explain-bloc__card {
   height: 90px;
   width: calc(100% - 15px);
@@ -142,44 +156,80 @@ body {
 }
 
 .menu-card {
-  min-height: 90px;
+  height: 90px;
+  padding-left: 15px;
   width: 100%;
-  padding: 20px 40px 20px 15px;
   background-color: #FFFFFF;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu-card:hover .menu-card__check {
+  transform: translateX(0px);
+}
+.menu-card:hover .menu-card__price {
+  transform: translateX(-80px);
+}
+.menu-card:hover .menu-card__check-icon {
+  transform: rotate(360deg);
+}
+.menu-card__content {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   row-gap: 15px;
-  position: relative;
-  -webkit-animation: menu-discover 1s both ease-in-out;
-          animation: menu-discover 1s both ease-in-out;
+  padding: 15px 0px;
+  max-width: 90%;
+  overflow: hidden;
+  cursor: pointer;
 }
-.menu-card__header {
+.menu-card__content-header {
   font: 700 1.9rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-.menu-card__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
   width: auto;
 }
-.menu-card__content-description {
+.menu-card__content-desc {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: auto;
 }
-.menu-card__content-price {
+.menu-card__price {
   font: 700 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
-  padding-left: 20px;
+  padding: 15px;
+  width: 10%;
+  box-sizing: content-box;
+  position: relative;
+  transform: translateX(0);
+  transition: transform 0.5s ease-out;
+}
+.menu-card__check {
+  width: 80px;
+  height: 90px;
+  background-color: #99E2D0;
+  border-radius: 0px 25px 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0px;
+  transform: translateX(80px);
+  transition: transform 0.5s ease-out;
+}
+.menu-card__check-icon {
+  color: #FFFFFF;
+  transform: rotate(90deg);
+  transition: transform 0.3s 0.1s ease-in;
 }
 
 .restaurant-bloc__card {

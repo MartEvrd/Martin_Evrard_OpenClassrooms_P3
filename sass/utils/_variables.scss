@@ -20,6 +20,8 @@ $menu-card-padding-top_bottom: 20px;
 $menu-card-padding-right: 40px;
 $menu-card-padding-top_bottom: 15px;
 
+$anim-card-check-duration: 0.5s;
+
 
 $font-standard-proportions: 62.5%;
 $font-standard-package: (
@@ -51,6 +53,12 @@ $font-package: (
     ),
     restaurant-header-menu: (
         weight: 300,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-price: (
+        weight: 700,
         size: 1.8,
         family: 'Roboto',
         color: $color-font-standard,

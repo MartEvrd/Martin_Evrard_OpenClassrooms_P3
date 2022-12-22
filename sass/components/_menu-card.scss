@@ -1,37 +1,83 @@
 .menu-card{
-    min-height: $menu-card-height;
+    height: $menu-card-height;
+    padding-left: 15px;
     width: 100%;
-    padding: 20px 40px 20px 15px;
     background-color: $color-bg-standard;
     border-radius: 25px;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    row-gap: 15px;
+    align-items: flex-end;
     position: relative;
-    animation: menu-discover 1s both ease-in-out;
-    &__header{
-        @include font-package(global-card-header);
-        // padding-right: 50px;
-        text-overflow: ellipsis;
-        white-space : nowrap;
-        overflow: hidden;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+        & .menu-card__check{
+            transform: translateX(0px);
+        }
+        & .menu-card__price{
+            transform: translateX(-80px);
+        }
+        & .menu-card__content{
+            // transform: scaleX(-80px);
+        }
+        & .menu-card__check-icon{
+            transform: rotate(360deg);
+        }
     }
+
     &__content{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        column-gap: 15px;
-        width: auto;
-        &-description{
+        row-gap: 15px;
+        padding: 15px 0px;
+        max-width: 90%;
+        overflow: hidden;
+        cursor: pointer;
+        // transition: all $anim-card-check-duration ease-out;
+        &-header{
+            @include font-package(global-card-header);
             text-overflow: ellipsis;
             white-space : nowrap;
             overflow: hidden;
+            width: auto;
         }
-        &-price{
-            @include font-package-specific($weight: 700, $size: 1.8);
-            padding-left: 20px;
+        &-desc{
+            text-overflow: ellipsis;
+            white-space : nowrap;
+            overflow: hidden;
+            width: auto;
+        }
+    }
+
+    &__price{
+        @include font-package(restaurant-price);
+        padding: 15px;
+        width: 10%;
+        box-sizing: content-box;
+        position: relative;
+        transform: translateX(0);
+        transition: transform $anim-card-check-duration ease-out;
+    }
+    
+    &__check{
+        width: 80px;
+        height: $menu-card-height;
+        background-color: $color-tertiary;
+        border-radius: 0px 25px 25px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0px;
+        transform: translateX(80px);
+        transition: transform $anim-card-check-duration ease-out;
+        &-icon{
+            color: $color-bg-standard;
+            transform: rotate(90deg);
+            transition: transform calc($anim-card-check-duration - 0.2s) .1s ease-in;
         }
     }
 }
