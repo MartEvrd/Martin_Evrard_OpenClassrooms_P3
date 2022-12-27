@@ -9,6 +9,34 @@
     }
 }
 
-@keyframes menu-check{
-    
+@keyframes full-heart{
+    0%{
+        opacity: 0;   
+    }
+    100%{
+        opacity: 1;
+    }
 }
+
+.heart-content{
+    font-size: $icon-heart-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        & .heart--colored{
+            animation: full-heart $anim-heart-duration both ease-in;
+        }
+        & .heart--empty{
+            animation: full-heart calc($anim-heart-duration / 10) both ease-in reverse;
+        }
+    }
+}
+.heart--colored{
+    position: absolute;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(65deg,$color-secondary 45%,$color-primary);
+    opacity: 0;
+}   

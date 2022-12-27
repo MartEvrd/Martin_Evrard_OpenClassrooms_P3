@@ -18,15 +18,15 @@
         border-radius: 5% / 20%;
         @include font-package-specific($weight: 500, $color: hsl(hue($color-tertiary), saturation($color-tertiary) + 20%, lightness($color-tertiary) - 40%));
     }
-    &--old{
-        display: none;
-    }
     &-img{
         height: 170px;
         width: 100%;
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
         position: relative;
+    }
+    &--old{
+        display: none;
     }
     &-content{
         display: flex;
@@ -41,5 +41,6 @@
     }
     &-location{
         @include font-package(standard);
-    }   
+    }
 }
+

@@ -97,8 +97,45 @@ body {
     opacity: 1;
   }
 }
-@-webkit-keyframes menu-check {}
-@keyframes menu-check {}
+@-webkit-keyframes full-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes full-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.heart-content {
+  font-size: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart-content:hover .heart--colored {
+  -webkit-animation: full-heart 500ms both ease-in;
+          animation: full-heart 500ms both ease-in;
+}
+.heart-content:hover .heart--empty {
+  animation: full-heart 50ms both ease-in reverse;
+}
+
+.heart--colored {
+  position: absolute;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(65deg, #FF79DA 45%, #9356DC);
+  opacity: 0;
+}
+
 .explain-bloc__card {
   height: 90px;
   width: calc(100% - 15px);
@@ -218,9 +255,6 @@ body {
   font: 500 1.7rem "Roboto", Arial, Verdana, sans-serif;
   color: hsl(165.2054794521deg, 75.7251908397%, 34.3137254902%);
 }
-.restaurant-bloc__card--old {
-  display: none;
-}
 .restaurant-bloc__card-img {
   height: 170px;
   width: 100%;
@@ -228,6 +262,9 @@ body {
      object-fit: cover;
   border-radius: 25px 25px 0px 0px;
   position: relative;
+}
+.restaurant-bloc__card--old {
+  display: none;
 }
 .restaurant-bloc__card-content {
   display: flex;
