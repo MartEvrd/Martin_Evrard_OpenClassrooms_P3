@@ -76,25 +76,21 @@ body {
   margin-top: 50px;
 }
 
-@-webkit-keyframes menu-discover {
+@-webkit-keyframes check-rotation {
   0% {
-    top: 15px;
-    opacity: 0;
+    transform: rotate(90deg);
   }
   100% {
-    top: 0px;
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 
-@keyframes menu-discover {
+@keyframes check-rotation {
   0% {
-    top: 15px;
-    opacity: 0;
+    transform: rotate(90deg);
   }
   100% {
-    top: 0px;
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes menu-check {
@@ -171,13 +167,11 @@ body {
   cursor: pointer;
 }
 .menu-card:hover .menu-card__check {
-  transform: translateX(0px);
-}
-.menu-card:hover .menu-card__price {
-  transform: translateX(-80px);
+  width: 80px;
 }
 .menu-card:hover .menu-card__check-icon {
-  transform: rotate(360deg);
+  -webkit-animation: check-rotation 250ms 100ms ease-in both;
+          animation: check-rotation 250ms 100ms ease-in both;
 }
 .menu-card__content {
   display: flex;
@@ -185,9 +179,10 @@ body {
   justify-content: space-between;
   row-gap: 15px;
   padding: 15px 0px;
-  max-width: 90%;
+  width: calc(90% - 80px);
   overflow: hidden;
   cursor: pointer;
+  flex-grow: 1;
 }
 .menu-card__content-header {
   font: 700 1.9rem "Roboto", Arial, Verdana, sans-serif;
@@ -206,30 +201,23 @@ body {
 .menu-card__price {
   font: 700 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
-  padding: 15px;
-  width: 10%;
-  box-sizing: content-box;
-  position: relative;
-  transform: translateX(0);
-  transition: transform 0.5s ease-out;
+  margin: 15px;
+  min-width: 10%;
+  max-width: 10%;
 }
 .menu-card__check {
-  width: 80px;
+  width: 0px;
   height: 90px;
   background-color: #99E2D0;
   border-radius: 0px 25px 25px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  right: 0px;
-  transform: translateX(80px);
-  transition: transform 0.5s ease-out;
+  transition: all 500ms;
+  overflow: hidden;
 }
 .menu-card__check-icon {
   color: #FFFFFF;
-  transform: rotate(90deg);
-  transition: transform 0.3s 0.1s ease-in;
 }
 
 .restaurant-bloc__card {

@@ -20,7 +20,13 @@ $menu-card-padding-top_bottom: 20px;
 $menu-card-padding-right: 40px;
 $menu-card-padding-top_bottom: 15px;
 
-$anim-card-check-duration: 0.5s;
+$price-width: 10%;
+
+$anim-card-check-duration: 500ms;
+$anim-check-rotation-duration: calc($anim-card-check-duration - 250ms);
+$anim-check-rotation-delay: 100ms;
+$anim-check-content-width: 80px;
+
 
 
 $font-standard-proportions: 62.5%;

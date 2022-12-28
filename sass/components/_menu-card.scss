@@ -14,29 +14,22 @@
     cursor: pointer;
     &:hover {
         & .menu-card__check{
-            transform: translateX(0px);
-        }
-        & .menu-card__price{
-            transform: translateX(-80px);
-        }
-        & .menu-card__content{
-            // transform: scaleX(-80px);
+            width: $anim-check-content-width;
         }
         & .menu-card__check-icon{
-            transform: rotate(360deg);
+            animation: check-rotation $anim-check-rotation-duration $anim-check-rotation-delay ease-in both;
         }
     }
-
     &__content{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         row-gap: 15px;
         padding: 15px 0px;
-        max-width: 90%;
+        width: calc(100% - $price-width - $anim-check-content-width);
         overflow: hidden;
         cursor: pointer;
-        // transition: all $anim-card-check-duration ease-out;
+        flex-grow: 1;
         &-header{
             @include font-package(global-card-header);
             text-overflow: ellipsis;
@@ -51,33 +44,24 @@
             width: auto;
         }
     }
-
     &__price{
         @include font-package(restaurant-price);
-        padding: 15px;
-        width: 10%;
-        box-sizing: content-box;
-        position: relative;
-        transform: translateX(0);
-        transition: transform $anim-card-check-duration ease-out;
+        margin: 15px;
+        min-width: $price-width;
+        max-width: $price-width;
     }
-    
     &__check{
-        width: 80px;
+        width: 0px;
         height: $menu-card-height;
         background-color: $color-tertiary;
         border-radius: 0px 25px 25px 0px;
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
-        right: 0px;
-        transform: translateX(80px);
-        transition: transform $anim-card-check-duration ease-out;
+        transition: all 500ms;
+        overflow: hidden;
         &-icon{
             color: $color-bg-standard;
-            transform: rotate(90deg);
-            transition: transform calc($anim-card-check-duration - 0.2s) .1s ease-in;
         }
     }
 }
