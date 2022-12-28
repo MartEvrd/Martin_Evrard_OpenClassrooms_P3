@@ -76,9 +76,27 @@ body {
   margin-top: 50px;
 }
 
-@-webkit-keyframes menu-discover {}
+@-webkit-keyframes menu-discover {
+  0% {
+    top: 15px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
 
-@keyframes menu-discover {}
+@keyframes menu-discover {
+  0% {
+    top: 15px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
 @-webkit-keyframes check-rotation {
   0% {
     transform: rotate(90deg);
