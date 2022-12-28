@@ -76,25 +76,23 @@ body {
   margin-top: 50px;
 }
 
-@-webkit-keyframes menu-discover {
+@-webkit-keyframes menu-discover {}
+
+@keyframes menu-discover {}
+@-webkit-keyframes check-rotation {
   0% {
-    top: 15px;
-    opacity: 0;
+    transform: rotate(90deg);
   }
   100% {
-    top: 0px;
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
-
-@keyframes menu-discover {
+@keyframes check-rotation {
   0% {
-    top: 15px;
-    opacity: 0;
+    transform: rotate(90deg);
   }
   100% {
-    top: 0px;
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 @-webkit-keyframes full-heart {
@@ -233,16 +231,16 @@ body {
 }
 
 .menu-card {
-  min-height: 90px;
+  height: 90px;
+  padding-left: 15px;
   width: 100%;
-  padding: 20px 40px 20px 15px;
   background-color: #FFFFFF;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  row-gap: 15px;
+  align-items: flex-end;
   position: relative;
 }
 .menu-card:nth-child(1) {
@@ -267,24 +265,61 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu-card:hover .menu-card__check {
+  width: 80px;
+}
+.menu-card:hover .menu-card__check-icon {
+  -webkit-animation: check-rotation 250ms 100ms ease-in both;
+          animation: check-rotation 250ms 100ms ease-in both;
 }
 .menu-card__content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  width: auto;
+  row-gap: 15px;
+  padding: 15px 0px;
+  width: calc(90% - 80px);
+  overflow: hidden;
+  cursor: pointer;
+  flex-grow: 1;
 }
-.menu-card__content-description {
+.menu-card__content-header {
+  font: 700 1.9rem "Roboto", Arial, Verdana, sans-serif;
+  color: #000000;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: auto;
 }
-.menu-card__content-price {
+.menu-card__content-desc {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+}
+.menu-card__price {
   font: 700 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
-  padding-left: 20px;
+  margin: 15px;
+  min-width: 10%;
+  max-width: 10%;
+}
+.menu-card__check {
+  width: 0px;
+  height: 90px;
+  background-color: #99E2D0;
+  border-radius: 0px 25px 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms;
+  overflow: hidden;
+}
+.menu-card__check-icon {
+  color: #FFFFFF;
 }
 
 .restaurant-bloc__card {

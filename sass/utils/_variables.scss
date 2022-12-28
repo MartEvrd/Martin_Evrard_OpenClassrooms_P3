@@ -26,6 +26,12 @@ $menu-card-padding-top_bottom: 15px;
 // Paramètres animation icône coeur
 $icon-heart-size: 2.6rem;
 $anim-heart-duration: 500ms;
+$price-width: 10%;
+
+$anim-card-check-duration: 500ms;
+$anim-check-rotation-duration: calc($anim-card-check-duration - 250ms);
+$anim-check-rotation-delay: 100ms;
+$anim-check-content-width: 80px;
 
 //Paramètres animation cartes menu
 $anim-menu-duration: 500ms;
@@ -62,6 +68,12 @@ $font-package: (
     ),
     restaurant-header-menu: (
         weight: 300,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-price: (
+        weight: 700,
         size: 1.8,
         family: 'Roboto',
         color: $color-font-standard,

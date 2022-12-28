@@ -1,12 +1,11 @@
 // Animations apparition des cartes de menu
-@keyframes menu-discover{
+@keyframes menu-discover{}
+@keyframes check-rotation{
     0% {
-        top: 15px;
-        opacity: 0;
+        transform: rotate(90deg);
     }
     100%{
-        top: 0px;
-        opacity: 1;
+        transform: rotate(360deg);
     }
 }
 
