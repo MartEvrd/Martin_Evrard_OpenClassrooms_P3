@@ -20,9 +20,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &-icon{
-            padding-right: 45px;
-        }
+        padding-right: 50px;
     }
     &__selection{
         @include global-section-positionning($top: 0);

@@ -1,3 +1,4 @@
+// Animations apparition des cartes de menu
 @keyframes menu-discover{
     0% {
         top: 15px;
@@ -9,12 +10,23 @@
     }
 }
 
+// Animations coeur
 @keyframes full-heart{
     0%{
-        opacity: 0;   
+        opacity: 0;
+        font-size: calc($icon-heart-size * 1.5);
     }
     100%{
         opacity: 1;
+        font-size: $icon-heart-size;
+    }
+}
+@keyframes empty-heart{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
     }
 }
 
@@ -23,12 +35,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    &__rest-page{
+        font-size: calc($icon-heart-size * 1.3);
+    }
     &:hover{
         & .heart--colored{
             animation: full-heart $anim-heart-duration both ease-in;
         }
         & .heart--empty{
-            animation: full-heart calc($anim-heart-duration / 10) both ease-in reverse;
+            animation: empty-heart calc($anim-heart-duration / 10) both ease-in;
         }
     }
 }
@@ -39,4 +55,4 @@
     -webkit-background-clip: text;
     background-image: -webkit-linear-gradient(65deg,$color-secondary 45%,$color-primary);
     opacity: 0;
-}   
+}

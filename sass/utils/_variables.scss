@@ -1,3 +1,4 @@
+// Paramètres couleurs généraux
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -9,20 +10,24 @@ $color-bg-footer: #2F2F2F;
 $color-font-standard: #000000;
 $color-font-secondary: #FFFFFF;
 
+// Paramètres positionnement généraux
 $general-right_left-padding: 30px;
 $general-top-padding: 35px;
 $general-bottom-padding: 50px;
 
 $global-page-max-width: 1400px;
 
+// Paramètres cartes Menu
 $menu-card-height: 90px;
 $menu-card-padding-top_bottom: 20px;
 $menu-card-padding-right: 40px;
 $menu-card-padding-top_bottom: 15px;
 
+// Paramètres icône coeur
 $icon-heart-size: 2.6rem;
 $anim-heart-duration: 500ms;
 
+// Paramètres polices généraux
 $font-standard-proportions: 62.5%;
 $font-standard-package: (
     weight: 300,
