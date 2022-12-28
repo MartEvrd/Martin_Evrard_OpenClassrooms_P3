@@ -10,6 +10,8 @@
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
     @for $i from 1 through 4{
         &:nth-child(#{$i}) {
             animation: $anim-menu-duration ease-in-out calc(($i - 1)*$anim-menu-delay) both menu-discover;
@@ -21,8 +23,6 @@
         text-overflow: ellipsis;
         white-space : nowrap;
         overflow: hidden;
-    overflow: hidden;
-    cursor: pointer;
     }
     &:hover {
         & .menu-card__check{
@@ -40,7 +40,6 @@
         padding: 15px 0px;
         width: calc(100% - $price-width - $anim-check-content-width);
         overflow: hidden;
-        cursor: pointer;
         flex-grow: 1;
         &-header{
             @include font-package(global-card-header);

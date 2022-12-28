@@ -260,6 +260,8 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 .menu-card:nth-child(1) {
   -webkit-animation: 500ms ease-in-out 0ms both menu-discover;
@@ -283,8 +285,6 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  overflow: hidden;
-  cursor: pointer;
 }
 .menu-card:hover .menu-card__check {
   width: 80px;
@@ -301,7 +301,6 @@ body {
   padding: 15px 0px;
   width: calc(90% - 80px);
   overflow: hidden;
-  cursor: pointer;
   flex-grow: 1;
 }
 .menu-card__content-header {
@@ -544,7 +543,9 @@ footer .footer__list-link:hover {
   font: 300 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
 }
-.menu-bloc__selection-limit {
+.menu-bloc__selection-header::after {
+  content: "";
+  display: block;
   margin: 5px 0px 15px;
   height: 4px;
   width: 50px;

@@ -27,12 +27,14 @@
         position: relative;
         &-header{
             @include font-package(restaurant-header-menu);
-        }
-        &-limit{
-            margin: 5px 0px 15px;
-            height: 4px;
-            width: 50px;
-            background-color: $color-tertiary;
+            &::after{
+                content: "";
+                display: block;
+                margin: 5px 0px 15px;
+                height: 4px;
+                width: 50px;
+                background-color: $color-tertiary;
+            }
         }
         &-list{
             display: flex;
