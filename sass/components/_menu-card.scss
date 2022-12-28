@@ -12,7 +12,7 @@
     position: relative;
     @for $i from 1 through 4{
         &:nth-child(#{$i}) {
-            animation: 1s ease-in-out calc(($i - 1)*.5s) both menu-discover;
+            animation: $anim-menu-duration ease-in-out calc(($i - 1)*$anim-menu-delay) both menu-discover;
         }
     }
     &__header{

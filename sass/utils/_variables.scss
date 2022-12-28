@@ -23,9 +23,13 @@ $menu-card-padding-top_bottom: 20px;
 $menu-card-padding-right: 40px;
 $menu-card-padding-top_bottom: 15px;
 
-// Paramètres icône coeur
+// Paramètres animation icône coeur
 $icon-heart-size: 2.6rem;
 $anim-heart-duration: 500ms;
+
+//Paramètres animation cartes menu
+$anim-menu-duration: 500ms;
+$anim-menu-delay: calc($anim-menu-duration / 2);
 
 // Paramètres polices généraux
 $font-standard-proportions: 62.5%;

@@ -192,6 +192,7 @@ body {
 .explain-bloc__card {
   height: 90px;
   width: calc(100% - 15px);
+  padding-right: 25px;
   font: 500 1.8rem "Roboto", Arial, Verdana, sans-serif;
   color: #000000;
   background-color: #F6F6F6;
@@ -245,20 +246,20 @@ body {
   position: relative;
 }
 .menu-card:nth-child(1) {
-  -webkit-animation: 1s ease-in-out 0s both menu-discover;
-          animation: 1s ease-in-out 0s both menu-discover;
+  -webkit-animation: 500ms ease-in-out 0ms both menu-discover;
+          animation: 500ms ease-in-out 0ms both menu-discover;
 }
 .menu-card:nth-child(2) {
-  -webkit-animation: 1s ease-in-out 0.5s both menu-discover;
-          animation: 1s ease-in-out 0.5s both menu-discover;
+  -webkit-animation: 500ms ease-in-out 250ms both menu-discover;
+          animation: 500ms ease-in-out 250ms both menu-discover;
 }
 .menu-card:nth-child(3) {
-  -webkit-animation: 1s ease-in-out 1s both menu-discover;
-          animation: 1s ease-in-out 1s both menu-discover;
+  -webkit-animation: 500ms ease-in-out 500ms both menu-discover;
+          animation: 500ms ease-in-out 500ms both menu-discover;
 }
 .menu-card:nth-child(4) {
-  -webkit-animation: 1s ease-in-out 1.5s both menu-discover;
-          animation: 1s ease-in-out 1.5s both menu-discover;
+  -webkit-animation: 500ms ease-in-out 750ms both menu-discover;
+          animation: 500ms ease-in-out 750ms both menu-discover;
 }
 .menu-card__header {
   font: 700 1.9rem "Roboto", Arial, Verdana, sans-serif;
