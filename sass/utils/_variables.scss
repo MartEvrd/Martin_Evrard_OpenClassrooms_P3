@@ -10,12 +10,27 @@ $color-bg-footer: #2F2F2F;
 $color-font-standard: #000000;
 $color-font-secondary: #FFFFFF;
 
+$color1-bg-loader: rgba(147,86,220,0.9);
+$color2-bg-loader: rgba(255,121,218,0.9);
+$color3-bg-loader: rgba(153,226,208,0.9);
+$loader-bg-transparency: 0.8;
+
 // Paramètres positionnement généraux
 $general-right_left-padding: 30px;
 $general-top-padding: 35px;
 $general-bottom-padding: 50px;
 
 $global-page-max-width: 1400px;
+
+//Paramètres loading-spinner
+$loader-width: 270px;
+$loader-height: 270px;
+$loader-dot-size: 20px;
+
+$loader-visibility-duration: 4s;
+
+$loader-circle-duration: 1500ms;
+$loader-circle-delay: calc($loader-circle-duration / 20);
 
 // Paramètres cartes Menu
 $menu-card-height: 90px;
@@ -56,6 +71,12 @@ $font-package: (
         family: map-get($font-standard-package, family),
         color: map-get($font-standard-package, color),
     ),// ! /!\ --------------------------------------------------
+    loader: (
+        weight: 400,
+        size: 3,
+        family: 'Shrikhand',
+        color: $color-font-secondary,
+    ),
     home-header: (
         weight: 700,
         size: 3,

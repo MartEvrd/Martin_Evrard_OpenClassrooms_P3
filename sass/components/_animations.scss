@@ -1,3 +1,57 @@
+//Animation loading spinner
+@keyframes loader-visibility{
+    0%,90%{
+        visibility: visible;
+        opacity: 1;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@keyframes loader-bg-gradient {
+    0% {
+        background-position: 0% 25%;
+    }
+    50% {
+        background-position: 75% 75%;
+    }
+    100% {
+        background-position: 0% 25%;
+        
+    }
+}
+@keyframes dots-sizing{
+    0%{
+        transform: scale(1);
+    }
+    80%,100%{
+        transform: scale(0);
+    }
+}
+@keyframes brand-beat{
+    0% {
+    transform: scale(0.8);
+    }
+    5% {
+    transform: scale(1.2);
+    }
+    10% {
+    transform: scale(0.8);
+    }
+    15% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(0.8);
+    }
+    100% {
+    transform: scale(0.8);
+    }
+
+}
+
+//--------------------------------------------------------------
 // Animations apparition des cartes de menu
 @keyframes menu-discover{
     0% {
@@ -10,6 +64,7 @@
     }
 }
 
+//--------------------------------------------------------------
 //Animation rotation de la validation du menu
 @keyframes check-rotation{
     0% {
@@ -20,6 +75,7 @@
     }
 }
 
+//--------------------------------------------------------------
 // Animations coeur
 @keyframes full-heart{
     0%{
