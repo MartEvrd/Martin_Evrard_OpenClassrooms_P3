@@ -117,6 +117,26 @@ body {
     font-size: 2.6rem;
   }
 }
+@-webkit-keyframes full-heart-restaurant {
+  0% {
+    opacity: 0;
+    font-size: 4.68rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 3.38rem;
+  }
+}
+@keyframes full-heart-restaurant {
+  0% {
+    opacity: 0;
+    font-size: 4.68rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 3.38rem;
+  }
+}
 @-webkit-keyframes empty-heart {
   0% {
     opacity: 1;
@@ -140,14 +160,22 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.heart-content__rest-page {
-  font-size: 3.38rem;
-}
 .heart-content:hover .heart--colored {
   -webkit-animation: full-heart 500ms both ease-in;
           animation: full-heart 500ms both ease-in;
 }
 .heart-content:hover .heart--empty {
+  -webkit-animation: empty-heart 50ms both ease-in;
+          animation: empty-heart 50ms both ease-in;
+}
+.heart-content__rest-page {
+  font-size: 3.38rem;
+}
+.heart-content__rest-page:hover .heart--colored {
+  -webkit-animation: full-heart-restaurant 500ms both ease-in;
+          animation: full-heart-restaurant 500ms both ease-in;
+}
+.heart-content__rest-page:hover .heart--empty {
   -webkit-animation: empty-heart 50ms both ease-in;
           animation: empty-heart 50ms both ease-in;
 }
