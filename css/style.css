@@ -102,7 +102,7 @@ body {
     background-position: 0% 25%;
   }
   50% {
-    background-position: 75% 75%;
+    background-position: 90% 90%;
   }
   100% {
     background-position: 0% 25%;
@@ -113,7 +113,7 @@ body {
     background-position: 0% 25%;
   }
   50% {
-    background-position: 75% 75%;
+    background-position: 90% 90%;
   }
   100% {
     background-position: 0% 25%;
@@ -139,40 +139,40 @@ body {
   0% {
     transform: scale(0.8);
   }
-  5% {
+  15% {
     transform: scale(1.2);
   }
-  10% {
-    transform: scale(0.8);
-  }
-  15% {
+  30% {
     transform: scale(1);
   }
   50% {
+    transform: scale(1.2);
+  }
+  75% {
     transform: scale(0.8);
   }
   100% {
-    transform: scale(0.8);
+    transform: scale(1);
   }
 }
 @keyframes brand-beat {
   0% {
     transform: scale(0.8);
   }
-  5% {
+  15% {
     transform: scale(1.2);
   }
-  10% {
-    transform: scale(0.8);
-  }
-  15% {
+  30% {
     transform: scale(1);
   }
   50% {
+    transform: scale(1.2);
+  }
+  75% {
     transform: scale(0.8);
   }
   100% {
-    transform: scale(0.8);
+    transform: scale(1);
   }
 }
 @-webkit-keyframes menu-discover {
@@ -538,6 +538,8 @@ footer .footer__list-link:hover {
 }
 
 .loader-timer {
+  -webkit-animation: loader-visibility 4s ease-out both;
+          animation: loader-visibility 4s ease-out both;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -1009,8 +1011,6 @@ footer .footer__list-link:hover {
           animation: dots-sizing 1500ms 1500ms linear infinite;
 }
 .loader-timer .loader-content .loader-bloc__brand {
-  -webkit-animation: brand-beat 2000ms ease both;
-          animation: brand-beat 2000ms ease both;
   font: 400 3rem "Shrikhand", Arial, Verdana, sans-serif;
   color: #FFFFFF;
 }

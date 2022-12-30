@@ -1,5 +1,5 @@
 .loader-timer{
-    // animation: loader-visibility $loader-visibility-duration ease-out both;
+    animation: loader-visibility $loader-visibility-duration ease-out both;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -55,7 +55,7 @@
                 }
             }
             &__brand{
-                animation: brand-beat 2000ms ease both;
+                // animation: brand-beat 2000ms ease both;
                 @include font-package(loader);
                 & span{
                     text-shadow: 0px 0px 30px $color-bg-standard,
