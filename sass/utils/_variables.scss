@@ -139,7 +139,16 @@ $font-package: (
     )
 );
 
+$breakpoints: (
+    big-mobiles: 481px,    
+    touch-pad: 769px,
+    laptop: 1025px,
+    HD-laptop: 1601px,
+);
 
+// Mobile : jusqu'à 576px
+// Tablette : jusqu'à 1024px
+// Au delà : ordinateurs
 
 
 

@@ -2,8 +2,17 @@ footer{
     @include global-section-positionning;
     background-color: $color-bg-footer;
     @include font-package(footer-standard);
+    @include touchpad-screens{
+        text-align: center
+    }
+    @include laptop-screens{
+        font-size: 2rem;
+    }
     .footer__header{
         @include font-package(footer-header);
+        @include laptop-screens{
+            font-size: 2.5rem;
+        }
     }
     .footer__list{
         margin-top: 15px;
@@ -13,8 +22,14 @@ footer{
         &-link{
             padding-bottom: 10px;
             cursor: pointer;
+            @include laptop-screens{
+                padding-bottom: 20px;
+            }
             &--top{
                 @include font-package(footer-highlight);
+                @include laptop-screens{
+                    font-size: 2rem;
+                }
             }
             &:hover{
                 text-decoration: underline;

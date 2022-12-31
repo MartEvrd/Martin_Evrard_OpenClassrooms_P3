@@ -17,6 +17,22 @@
             animation: $anim-menu-duration ease-in-out calc(($i - 1)*$anim-menu-delay) both menu-discover;
         }
     }
+    @include touchpad-screens{
+        max-width: 340px;
+        @for $i from 1 through 4{
+            &:nth-child(#{$i}) {
+                animation: $anim-menu-duration ease-in-out both menu-discover;
+            }
+        }
+    }
+    @include laptop-screens{
+        max-width: calc((100% / 3) - 50px);
+        @for $i from 1 through 4{
+            &:nth-child(#{$i}) {
+                animation: $anim-menu-duration ease-in-out both menu-discover;
+            }
+        }
+    }
     &__header{
         @include font-package(global-card-header);
         // padding-right: 50px;

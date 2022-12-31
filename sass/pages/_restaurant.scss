@@ -2,8 +2,14 @@
     margin: 0 auto;
     &__img{
         object-fit: cover;
-        height: 350px;
+        height: 200px;
         width: 100%;
+        @include touchpad-screens{
+            height: 350px;
+        }
+        @include laptop-screens{
+            height: 450px;
+        }
     }
 }
 
@@ -13,7 +19,6 @@
     position: relative;
     top: -50px;
     border-radius: 40px 40px 0px 0px;
-    position: relative;
     &__header{
         @include global-section-positionning($bottom: 30px);
         @include font-package(restaurant-header-top);
@@ -21,19 +26,44 @@
         justify-content: space-between;
         align-items: center;
         padding-right: 50px;
+        & h1{
+            @include laptop-screens{
+                font-size: 3.5rem;
+            }
+        }
+        @include touchpad-screens{
+            padding: 35px 50px 30px;
+        }
+        @include laptop-screens{
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+            @include global-section-positionning($bottom: 50px);
+        }
     }
     &__selection{
         @include global-section-positionning($top: 0);
         position: relative;
         &-header{
             @include font-package(restaurant-header-menu);
+            @include touchpad-screens{
+                text-align: center;            
+            }
+            @include laptop-screens{
+                font-size: 2.1rem;
+            }
             &::after{
                 content: "";
                 display: block;
                 margin: 5px 0px 15px;
                 height: 4px;
-                width: 50px;
+                width: 45px;
                 background-color: $color-tertiary;
+                @include touchpad-screens{
+                    margin: 5px auto 30px;
+                    width: 100px;
+            
+                }
             }
         }
         &-list{
@@ -41,7 +71,14 @@
             flex-direction: column;
             row-gap: 15px;
             position: relative;
-            
+            @include touchpad-screens{
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                flex-wrap: wrap;
+                row-gap: 30px;
+                column-gap: 25px;
+            }
         }
     }
 }

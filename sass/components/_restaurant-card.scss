@@ -5,6 +5,13 @@
     border-radius: 25px;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
     position: relative;
+    @include touchpad-screens{
+        max-width: 340px;
+    }
+    @include laptop-screens{
+        height: 400px;
+        max-width: calc((100% / 2) - 50px);
+    }
     &:hover{
         box-shadow:rgba(0, 0, 0, 0.5) 0px 8px 15px 1px;
     }
@@ -17,6 +24,9 @@
         padding: 5px 15px;
         border-radius: 5% / 20%;
         @include font-package-specific($weight: 500, $color: hsl(hue($color-tertiary), saturation($color-tertiary) + 20%, lightness($color-tertiary) - 40%));
+        @include laptop-screens{
+            font-size: 2rem;
+        }
     }
     &-img{
         height: 170px;
@@ -24,6 +34,9 @@
         object-fit: cover;
         border-radius: 25px 25px 0px 0px;
         position: relative;
+        @include laptop-screens{
+            height: 300px;
+        }
     }
     &--old{
         display: none;
@@ -34,13 +47,22 @@
         align-items: center;
         position: relative;
         padding: 10px 25px 10px 15px;
+        @include laptop-screens{
+            padding-top: 15px;
+        }
     }
     &-header{
         @include font-package(global-card-header);
         margin-bottom: 5px;
+        @include laptop-screens{
+            font-size: 2.3rem;
+        }
     }
     &-location{
         @include font-package(standard);
+        @include laptop-screens{
+            font-size: 2rem;
+        }
     }
 }
 

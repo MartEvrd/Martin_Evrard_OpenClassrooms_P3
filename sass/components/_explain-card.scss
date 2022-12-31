@@ -12,6 +12,13 @@
     grid-template-columns: 10px 70px calc(100% - 80px);
     justify-items: center;
     align-items: center;
+    @include touchpad-screens{
+        max-width: 330px;
+    }
+    @include laptop-screens{
+        height: 100px;
+        max-width: calc((100% / 3) - 50px);
+    }
     &--highlight{
         background-color: hsl(hue($color-primary), 100%, 95%);
     }

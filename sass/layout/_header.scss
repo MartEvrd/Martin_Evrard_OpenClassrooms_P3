@@ -8,6 +8,9 @@ header{
         position: absolute;
         left: 30px;
         color: #000000;
+        @include laptop-screens{
+            left: 60px;
+        }
         &--hidden{
             display: none;
         }

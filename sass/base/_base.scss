@@ -2,6 +2,9 @@ html{
     font-size: $font-standard-proportions;
     max-width: $global-page-max-width;
     margin: 0 auto;
+    @include laptop-screens{
+        max-width: 100%;
+    }
 }
 
 body{
