@@ -1,5 +1,5 @@
 footer{
-    @include global-section-positionning;
+    @include global-section-positionning($bottom: $general-top-padding);
     background-color: $color-bg-footer;
     @include font-package(footer-standard);
     @include touchpad-screens{

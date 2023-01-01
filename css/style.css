@@ -78,7 +78,8 @@ body {
   box-shadow: inset 0px -30px 70px -20px hsl(267.3134328358deg, 100%, 66%), rgba(0, 0, 0, 0.5) 0px 8px 15px 2px;
 }
 .btn-cta--bottom-page {
-  margin-top: 50px;
+  position: relative;
+  bottom: 40px;
 }
 
 @-webkit-keyframes loader-visibility {
@@ -398,20 +399,20 @@ body {
     max-width: 340px;
   }
   .menu-card:nth-child(1) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
   .menu-card:nth-child(2) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
   .menu-card:nth-child(3) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
   .menu-card:nth-child(4) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -419,20 +420,20 @@ body {
     max-width: calc(33.3333333333% - 50px);
   }
   .menu-card:nth-child(1) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
   .menu-card:nth-child(2) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
   .menu-card:nth-child(3) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
   .menu-card:nth-child(4) {
-    -webkit-animation: 500ms ease-in-out both menu-discover;
-            animation: 500ms ease-in-out both menu-discover;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 .menu-card__header {
@@ -608,7 +609,7 @@ header .logo {
 
 footer {
   margin: 0 auto;
-  padding: 35px 30px 50px 30px;
+  padding: 35px 30px 35px 30px;
   background-color: #2F2F2F;
   font: 400 1.6rem "Roboto", Arial, Verdana, sans-serif;
   color: #FFFFFF;
@@ -1338,6 +1339,42 @@ footer .footer__list-link:hover {
   .menu-bloc__selection-header::after {
     margin: 5px auto 30px;
     width: 100px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .menu-bloc__selection:nth-child(1) {
+    -webkit-animation: 500ms ease-in-out 0ms both menu-discover;
+            animation: 500ms ease-in-out 0ms both menu-discover;
+  }
+  .menu-bloc__selection:nth-child(2) {
+    -webkit-animation: 500ms ease-in-out 250ms both menu-discover;
+            animation: 500ms ease-in-out 250ms both menu-discover;
+  }
+  .menu-bloc__selection:nth-child(3) {
+    -webkit-animation: 500ms ease-in-out 500ms both menu-discover;
+            animation: 500ms ease-in-out 500ms both menu-discover;
+  }
+  .menu-bloc__selection:nth-child(4) {
+    -webkit-animation: 500ms ease-in-out 750ms both menu-discover;
+            animation: 500ms ease-in-out 750ms both menu-discover;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .menu-bloc__selection:nth-child(1) {
+    -webkit-animation: 500ms ease-in-out 0ms both menu-discover;
+            animation: 500ms ease-in-out 0ms both menu-discover;
+  }
+  .menu-bloc__selection:nth-child(2) {
+    -webkit-animation: 500ms ease-in-out 250ms both menu-discover;
+            animation: 500ms ease-in-out 250ms both menu-discover;
+  }
+  .menu-bloc__selection:nth-child(3) {
+    -webkit-animation: 500ms ease-in-out 500ms both menu-discover;
+            animation: 500ms ease-in-out 500ms both menu-discover;
+  }
+  .menu-bloc__selection:nth-child(4) {
+    -webkit-animation: 500ms ease-in-out 750ms both menu-discover;
+            animation: 500ms ease-in-out 750ms both menu-discover;
   }
 }
 .menu-bloc__selection-list {

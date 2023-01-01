@@ -21,7 +21,7 @@
         max-width: 340px;
         @for $i from 1 through 4{
             &:nth-child(#{$i}) {
-                animation: $anim-menu-duration ease-in-out both menu-discover;
+                animation: none
             }
         }
     }
@@ -29,7 +29,7 @@
         max-width: calc((100% / 3) - 50px);
         @for $i from 1 through 4{
             &:nth-child(#{$i}) {
-                animation: $anim-menu-duration ease-in-out both menu-discover;
+                animation: none;
             }
         }
     }

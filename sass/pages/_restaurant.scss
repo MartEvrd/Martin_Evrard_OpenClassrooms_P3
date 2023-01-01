@@ -44,6 +44,7 @@
     &__selection{
         @include global-section-positionning($top: 0);
         position: relative;
+        
         &-header{
             @include font-package(restaurant-header-menu);
             @include touchpad-screens{
@@ -66,6 +67,20 @@
                 }
             }
         }
+        @include touchpad-screens{
+            @for $i from 1 through 4{
+                &:nth-child(#{$i}) {
+                    animation: $anim-menu-duration ease-in-out calc(($i - 1)*$anim-menu-delay) both menu-discover;
+                }
+            }
+        }
+        @include laptop-screens{
+            @for $i from 1 through 4{
+                &:nth-child(#{$i}) {
+                    animation: $anim-menu-duration ease-in-out calc(($i - 1)*$anim-menu-delay) both menu-discover;
+                }
+            }
+        }
         &-list{
             display: flex;
             flex-direction: column;
@@ -78,7 +93,9 @@
                 flex-wrap: wrap;
                 row-gap: 30px;
                 column-gap: 25px;
+                
             }
+            
         }
     }
 }
