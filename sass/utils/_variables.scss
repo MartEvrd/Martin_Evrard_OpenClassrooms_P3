@@ -1,4 +1,8 @@
-// Paramètres couleurs généraux
+// --------------------------------
+// * PARAMETRES GENERAUX
+// --------------------------------
+
+// COULEURS
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -15,54 +19,189 @@ $color2-bg-loader: rgba(255,121,218,0.9);
 $color3-bg-loader: rgba(153,226,208,0.9);
 $loader-bg-transparency: 0.8;
 
-// Paramètres positionnement généraux
+// POSITIONNEMENTS
+$global-page-max-width: 1400px;
+
 $general-right_left-padding: 30px;
 $general-top-padding: 35px;
 $general-bottom-padding: 50px;
 
-$global-page-max-width: 1400px;
+// --------------------------------
+// * PARAMETRES SPECIFIQUES PAGES
+// --------------------------------
 
-//Paramètres loading-spinner
-$loader-width: 270px;
-$loader-height: 270px;
+// PAGE ACCUEIL
+    // -> Paddings/Margins
+$home-headers-bottom-paddings: 20px;
+
+    // Location
+    // -> Dimensions
+$home-location-height: 70px;
+
+    // Welcome
+    // -> Dimensions
+$home-welcome-height: 240px;
+
+// PAGE RESTAURANTS
+
+    // Image
+    // -> Dimensions
+$menu-img-height: 200px;
+$menu-img-width: 100%;
+
+    // Bloc Menu
+    // -> Paddings/Margins
+$menu-title-right-padding: 20px;
+$menu-headerbloc-right-padding: 50px;
+
+    // -> Arrondis
+$menu-bloc-bdradius: 40px;
+
+    // -> Barre Verte
+$menu-GreenLimit-height: 4px;
+$menu-GreenLimit-width: 45px;
+$menu-GreenLimit-top-margin: 5px;
+$menu-GreenLimit-bottom-margin: 15px;
+
+// --------------------------------
+// * PARAMETRES CARTES
+// --------------------------------
+
+// EXPLAIN CARDS
+    // -> Dimensions
+$explain-card-height: 90px;
+$explain-card-width: calc(100% - 15px);
+    // -> Paddings/Margins
+$explain-card-padding-top_bottom: 0px;
+$explain-card-padding-right: 25px;
+$explain-card-padding-left: 0px;
+    // -> Arrondis
+$explain-card-bdradius: 25px;
+    // -> Numéros des cartes
+$explain-num-size: 30px;
+$explain-num-gap: 5px;
+
+// RESTAURANTS CARDS
+    // -> Dimensions
+$rest-card-height: 250px;
+$rest-card-width: 100%;
+
+$rest-card-img-height: 170px;
+$rest-card-img-width: 100%;
+
+    // -> Paddings/margins
+$rest-card-padding-top_bottom: 10px;
+$rest-card-padding-right: 25px;
+$rest-card-padding-left: 15px;
+
+$rest-card-header-bottom-margin: 5px;
+
+    // -> Arrondis
+$rest-card-bdradius: 25px;
+
+    // -> New Tag
+$rest-card-NewTag-gap: 15px;
+$rest-card-NewTag-top-bottom-padding: 5px;
+$rest-card-NewTag-right-left-padding: 15px;
+
+// MENU CARDS
+    // -> Dimensions
+$menu-card-height: 90px;
+$menu-card-width: 100%;
+
+$menu-card-price-width: 10%;
+
+    // -> Paddings/margins
+$menu-card-padding-top_bottom: 0px;
+$menu-card-padding-right: 0px;
+$menu-card-padding-left: 15px;
+
+$menu-content-padding-top-bottom: 15px;
+$menu-content-padding-right-left: 0px;
+
+$menu-price-margins: 15px;
+
+    // -> Arrondis
+$explain-card-bdradius: 25px;
+
+// --------------------------------
+// * PARAMETRES LOADING SPINNER
+// --------------------------------
+    // -> Dimensions
+$ldsp-global-width: 100vw;
+$ldsp-global-height: 100vh;
+$ldsp-bg-size: 250%;
+
+$ldsp-central-square-width: 270px;
+$ldsp-central-square-height: 270px;
+
+$ldsp-second-square-size: 75%;
+
 $loader-dot-size: 20px;
 
+    // -> Position
+$ldsp-second-square-gap: 32px;
+
+    // -> Durée/Delays
 $loader-visibility-duration: 4s;
+
+$ldsp-bg-duration: 3s;
 
 $loader-circle-duration: 1500ms;
 $loader-circle-delay: calc($loader-circle-duration / 20);
 
-// Paramètres cartes Menu
-$menu-card-height: 90px;
-$menu-card-padding-top_bottom: 20px;
-$menu-card-padding-right: 40px;
-$menu-card-padding-top_bottom: 15px;
+// --------------------------------
+// * PARAMETRES BOUTON
+// --------------------------------
+    // -> Dimensions
+$btn-width: 240px;
+$btn-height: 55px;
 
-// Paramètres animation icône coeur
+    // -> Paddings/margins
+$btn-top-padding: 30px;
+$btn-bottom-padding: 0px;
+$btn-botpage-bottom-padding: 40px;
+
+    // -> Position
+
+// --------------------------------
+// * PARAMETRES ANIMATIONS
+// --------------------------------
+
+// ICONE COEUR
+    // -> Dimensions
 $icon-heart-size: 2.6rem;
+    // -> Durée/Delays
 $anim-heart-duration: 500ms;
 
-// Paramètres animation validation menu
-$price-width: 10%;
-
-$anim-card-check-duration: 500ms;
-$anim-check-rotation-duration: calc($anim-card-check-duration - 250ms);
-$anim-check-rotation-delay: 100ms;
-$anim-check-content-width: 80px;
-
-//Paramètres animation cartes menu
+// APPARITION CARTES MENU
+    // -> Position
+$anim-menu-init-gap: 15px;
+    // -> Durées/Delays
 $anim-menu-duration: 500ms;
 $anim-menu-delay: calc($anim-menu-duration / 2);
 
-// Paramètres polices généraux
+// COCHE VERTE VALIDATION PLAT
+    // -> Dimensions
+$anim-check-content-width: 80px;
+    // -> Durées/Delays
+$anim-card-check-duration: 500ms;
+$anim-check-rotation-duration: calc($anim-card-check-duration / 2);
+$anim-check-rotation-delay: 100ms;
+
+// --------------------------------
+// * PARAMETRES POLICES GENERAUX
+// --------------------------------
+    // -> Initialisation taille
 $font-standard-proportions: 62.5%;
+    // -> Définition du standard
 $font-standard-package: (
     weight: 300,
     size: 1.7,
     family: 'Roboto',
     color: $color-font-standard
 );
-
+    // -> Map de définitions de toutes les sortes de polices utilisées
 $font-package: (
     // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$font-standard-package'
     standard: (
@@ -71,6 +210,24 @@ $font-package: (
         family: map-get($font-standard-package, family),
         color: map-get($font-standard-package, color),
     ),// ! /!\ --------------------------------------------------
+    global-highlight: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-card-header: (
+        weight: 700,
+        size: 1.9,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-buttons: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
     loader: (
         weight: 400,
         size: 3,
@@ -80,6 +237,12 @@ $font-package: (
     home-header: (
         weight: 700,
         size: 3,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    home-welcome: (
+        weight: 300,
+        size: 1.8,
         family: 'Roboto',
         color: $color-font-standard,
     ),
@@ -101,24 +264,6 @@ $font-package: (
         family: 'Roboto',
         color: $color-font-standard,
     ),
-    global-card-header: (
-        weight: 700,
-        size: 1.9,
-        family: 'Roboto',
-        color: $color-font-standard,
-    ),
-    global-highlight: (
-        weight: 500,
-        size: 1.8,
-        family: 'Roboto',
-        color: $color-font-standard,
-    ),
-    global-buttons: (
-        weight: 500,
-        size: 1.8,
-        family: 'Roboto',
-        color: $color-font-secondary,
-    ),
     footer-standard: (
         weight: 400,
         size: 1.6,
@@ -138,20 +283,3 @@ $font-package: (
         color: $color-font-secondary,
     )
 );
-
-// MEDIAS QUERIES - PARAMETRES
-$breakpoints: (
-    big-mobiles: 481px,    
-    touch-pad: 769px,
-    laptop: 1025px,
-    HD-laptop: 1601px,
-);
-// Mobile : jusqu'à 576px
-// Tablette : jusqu'à 1024px
-// Au delà : ordinateurs
-
-
-
-
-
-

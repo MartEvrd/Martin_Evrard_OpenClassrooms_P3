@@ -1,7 +1,7 @@
 .menu-card{
     height: $menu-card-height;
-    padding-left: 15px;
-    width: 100%;
+    padding-left: $menu-card-padding-left;
+    width: $menu-card-width;
     background-color: $color-bg-standard;
     border-radius: 25px;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
@@ -35,7 +35,6 @@
     }
     &__header{
         @include font-package(global-card-header);
-        // padding-right: 50px;
         text-overflow: ellipsis;
         white-space : nowrap;
         overflow: hidden;
@@ -53,8 +52,8 @@
         flex-direction: column;
         justify-content: space-between;
         row-gap: 15px;
-        padding: 15px 0px;
-        width: calc(100% - $price-width - $anim-check-content-width);
+        padding: $menu-content-padding-top-bottom $menu-content-padding-right-left;
+        width: calc(100% - $menu-card-price-width - $anim-check-content-width);
         overflow: hidden;
         flex-grow: 1;
         &-header{
@@ -73,19 +72,19 @@
     }
     &__price{
         @include font-package(restaurant-price);
-        margin: 15px;
-        min-width: $price-width;
-        max-width: $price-width;
+        margin: $menu-price-margins;
+        min-width: $menu-card-price-width;
+        max-width: $menu-card-price-width;
     }
     &__check{
         width: 0px;
         height: $menu-card-height;
         background-color: $color-tertiary;
-        border-radius: 0px 25px 25px 0px;
+        border-radius: 0px $explain-card-bdradius $explain-card-bdradius 0px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 500ms;
+        transition: all $anim-card-check-duration;
         overflow: hidden;
         &-icon{
             color: $color-bg-standard;

@@ -2,13 +2,13 @@
     margin: 0 auto;
     &__img{
         object-fit: cover;
-        height: 200px;
-        width: 100%;
+        height: $menu-img-height;
+        width: $menu-img-width;
         @include touchpad-screens{
-            height: 350px;
+            height: $touchpad-menu-img-height;
         }
         @include laptop-screens{
-            height: 450px;
+            height: $laptop-menu-img-height;
         }
     }
 }
@@ -18,21 +18,22 @@
     background-color: $color-bg-alternative;
     position: relative;
     top: -50px;
-    border-radius: 40px 40px 0px 0px;
+    border-radius: $menu-bloc-bdradius $menu-bloc-bdradius 0px 0px;
     &__header{
         @include global-section-positionning($bottom: 30px);
         @include font-package(restaurant-header-top);
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 50px;
+        padding-right: $menu-headerbloc-right-padding;
         & h1{
+            padding-right: $menu-title-right-padding;
             @include laptop-screens{
-                font-size: 3.5rem;
+                @include font-package-laptop(restaurant-header-top);
             }
         }
         @include touchpad-screens{
-            padding: 35px 50px 30px;
+            padding: $touchapd-menu-card-top-padding $touchapd-menu-card-right_left-padding $touchapd-menu-card-bottom-padding;
         }
         @include laptop-screens{
             flex-direction: column;
@@ -51,18 +52,18 @@
                 text-align: center;            
             }
             @include laptop-screens{
-                font-size: 2.1rem;
+                @include font-package-laptop(restaurant-header-menu);
             }
             &::after{
                 content: "";
                 display: block;
-                margin: 5px 0px 15px;
-                height: 4px;
-                width: 45px;
+                margin: $menu-GreenLimit-top-margin 0px $menu-GreenLimit-bottom-margin;
+                height: $menu-GreenLimit-height;
+                width: $menu-GreenLimit-width;
                 background-color: $color-tertiary;
                 @include touchpad-screens{
-                    margin: 5px auto 30px;
-                    width: 100px;
+                    margin: $menu-GreenLimit-top-margin auto $touchpad-menu-GreenLimit-bottom-margin;
+                    width: $touchpad-menu-GreenLimit-width;
             
                 }
             }
@@ -95,7 +96,6 @@
                 column-gap: 25px;
                 
             }
-            
         }
     }
 }

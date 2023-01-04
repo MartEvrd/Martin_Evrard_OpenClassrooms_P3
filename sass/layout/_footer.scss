@@ -6,12 +6,12 @@ footer{
         text-align: center
     }
     @include laptop-screens{
-        font-size: 2rem;
+        @include font-package-laptop(footer-standard);
     }
     .footer__header{
         @include font-package(footer-header);
         @include laptop-screens{
-            font-size: 2.5rem;
+            @include font-package-laptop(footer-header);
         }
     }
     .footer__list{
@@ -28,7 +28,7 @@ footer{
             &--top{
                 @include font-package(footer-highlight);
                 @include laptop-screens{
-                    font-size: 2rem;
+                    @include font-package-laptop(footer-highlight);
                 }
             }
             &:hover{

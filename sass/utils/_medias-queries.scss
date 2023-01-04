@@ -1,0 +1,249 @@
+
+// --------------------------------
+// * MEDIAS QUERIES - PARAMETRES GENERAUX
+// --------------------------------
+
+    // -> Mobile : jusqu'à 480px
+    // -> "Mobile-Tablette" : jusqu'à 768px;
+    // -> Tablette : jusqu'à 1024px
+    // -> Au delà : ordinateurs
+
+$breakpoints: (
+    big-mobiles: 481px,    
+    touch-pad: 769px,
+    laptop: 1025px,
+    HD-laptop: 1601px,
+);
+
+// --------------------------------
+// * PARAMETRES SPECIFIQUES PAGES
+// --------------------------------
+
+// PAGE ACCUEIL
+    // -> Paddings/Margins
+$laptop_home-headers-bottom-paddings: 40px;
+
+// PAGE RESTAURANTS
+    // -> Dimensions
+$touchpad-menu-img-height: 350px;
+$laptop-menu-img-height: 450px;
+
+    // -> Barre Verte
+$touchpad-menu-GreenLimit-width: 100px;
+$touchpad-menu-GreenLimit-bottom-margin: 30px;
+// --------------------------------
+// * PARAMETRES SPECIFIQUES CARTES
+// --------------------------------
+
+// EXPLAIN CARDS
+    // -> Dimensions
+$touchpad-explaincard-width: 330px;
+
+$laptop-explaincard-width: calc((100% / 3) - 50px);
+$laptop-explaincard-height: 100px;
+
+// RESTAURANTS CARDS
+    // -> Dimensions
+$touchpad-restcard-width: 340px;
+
+$laptop-restcard-width: calc((100% / 2) - 50px);
+$laptop-restcard-height: 400px;
+$laptop-restcard-img-height: 300px;
+
+    // -> Paddings/Margins
+$touchapd-menu-card-top-padding: 35px;
+$touchapd-menu-card-right_left-padding: 50px;
+$touchapd-menu-card-bottom-padding: 30px;
+
+// --------------------------------
+// * TABLETTES -- Package de polices
+// --------------------------------
+
+$touchpad-font-standard-package: (
+    weight: 300,
+    size: 1.7,
+    family: 'Roboto',
+    color: $color-font-standard
+);
+
+$font-package-touchpad: (
+    // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$touchapd-font-standard-package'
+    standard: (
+        weight: map-get($touchpad-font-standard-package, weight),
+        size: map-get($touchpad-font-standard-package, size),
+        family: map-get($touchpad-font-standard-package, family),
+        color: map-get($touchpad-font-standard-package, color),
+    ),// ! /!\ --------------------------------------------------
+    global-highlight: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-card-header: (
+        weight: 700,
+        size: 1.9,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-buttons: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
+    loader: (
+        weight: 400,
+        size: 3,
+        family: 'Shrikhand',
+        color: $color-font-secondary,
+    ),
+    home-header: (
+        weight: 700,
+        size: 3,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    home-welcome: (
+        weight: 300,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-header-top: (
+        weight: 700,
+        size: 2.8,
+        family: 'Shrikhand',
+        color: $color-font-standard,
+    ),
+    restaurant-header-menu: (
+        weight: 300,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-price: (
+        weight: 700,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    footer-standard: (
+        weight: 400,
+        size: 1.6,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
+    footer-header: (
+        weight: 400,
+        size: 1.8,
+        family: 'Shrikhand',
+        color: $color-font-secondary,
+    ),
+    footer-highlight: (
+        weight: 700,
+        size: 1.6,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    )
+);
+
+// --------------------------------
+// * LAPTOP -- Package de polices
+// --------------------------------
+
+$laptop-font-standard-package: (
+    weight: 300,
+    size: 2,
+    family: 'Roboto',
+    color: $color-font-standard
+);
+
+$font-package-laptop: (
+    // ! /!\ NE PAS MODIFIER /!\ -- Pour modifier ce kit de police, modifier directement la map '$laptop-font-standard-package'
+    standard: (
+        weight: map-get($laptop-font-standard-package, weight),
+        size: map-get($laptop-font-standard-package, size),
+        family: map-get($laptop-font-standard-package, family),
+        color: map-get($laptop-font-standard-package, color),
+    ),// ! /!\ --------------------------------------------------
+    global-highlight: (
+        weight: 500,
+        size: 2,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-card-header: (
+        weight: 700,
+        size: 2.3,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    global-buttons: (
+        weight: 500,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
+    loader: (
+        weight: 400,
+        size: 3,
+        family: 'Shrikhand',
+        color: $color-font-secondary,
+    ),
+    home-header: (
+        weight: 700,
+        size: 3,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    home-welcome: (
+        weight: 300,
+        size: 2,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-header-top: (
+        weight: 700,
+        size: 3.5,
+        family: 'Shrikhand',
+        color: $color-font-standard,
+    ),
+    restaurant-header-menu: (
+        weight: 300,
+        size: 2.1,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    restaurant-price: (
+        weight: 700,
+        size: 1.8,
+        family: 'Roboto',
+        color: $color-font-standard,
+    ),
+    footer-standard: (
+        weight: 400,
+        size: 2,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    ),
+    footer-header: (
+        weight: 400,
+        size: 2.5,
+        family: 'Shrikhand',
+        color: $color-font-secondary,
+    ),
+    footer-highlight: (
+        weight: 700,
+        size: 2,
+        family: 'Roboto',
+        color: $color-font-secondary,
+    )
+);
+
+
+
+
+
+
+

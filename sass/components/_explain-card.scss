@@ -1,11 +1,11 @@
 .explain-bloc__card{
-    height: 90px;
+    height: $explain-card-height;
     // Mesure permettant de redéfinir la dimension de la card, afin de permettre l'alignement gauche de la bulle numérotée, décalée de 5px vers la gauche par sa position relative.
-    width: calc(100% - 15px);
-    padding-right: 25px;
+    width: $explain-card-width;
+    padding-right: $explain-card-padding-right;
     @include font-package(global-highlight);
     background-color: $color-bg-alternative;
-    border-radius: 25px;
+    border-radius: $explain-card-bdradius;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px 1px;
     position: relative;
     display: grid;
@@ -13,11 +13,12 @@
     justify-items: center;
     align-items: center;
     @include touchpad-screens{
-        max-width: 330px;
+        max-width: $touchpad-explaincard-width;
     }
     @include laptop-screens{
-        height: 100px;
-        max-width: calc((100% / 3) - 50px);
+        height: $laptop-explaincard-height;
+        max-width: $laptop-explaincard-width;
+        @include font-package(global-highlight);
     }
     &--highlight{
         background-color: hsl(hue($color-primary), 100%, 95%);
@@ -25,14 +26,14 @@
     &-num{
         background-color: $color-primary;
         @include font-package-specific($color: #FFFFFF);
-        height: 30px;
-        width: 30px;
+        height: $explain-num-size;
+        width: $explain-num-size;
         border-radius: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        right: 5px;
+        right: $explain-num-gap;
     }
     &-icon{
         color: darken($color-bg-alternative, 52%);

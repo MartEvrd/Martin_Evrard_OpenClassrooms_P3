@@ -1,16 +1,16 @@
 .restaurant-bloc__card{
-    height: 250px;
-    width: 100%;
+    height: $rest-card-height;
+    width: $rest-card-width;
     background-color: $color-bg-standard;
-    border-radius: 25px;
+    border-radius: $rest-card-bdradius;
     box-shadow:rgba(0, 0, 0, 0.15) 0px 8px 15px -5px;
     position: relative;
     @include touchpad-screens{
-        max-width: 340px;
+        max-width: $touchpad-restcard-width;
     }
     @include laptop-screens{
-        height: 400px;
-        max-width: calc((100% / 2) - 50px);
+        height: $laptop-restcard-height;
+        max-width: $laptop-restcard-width;
     }
     &:hover{
         box-shadow:rgba(0, 0, 0, 0.5) 0px 8px 15px 1px;
@@ -18,10 +18,10 @@
     &--new{
         position: absolute;
         z-index: 1;
-        top: 15px;
-        right: 15px;
+        top: $rest-card-NewTag-gap;
+        right: $rest-card-NewTag-gap;
         background-color: $color-tertiary;
-        padding: 5px 15px;
+        padding: $rest-card-NewTag-top-bottom-padding $rest-card-NewTag-right-left-padding;
         border-radius: 5% / 20%;
         @include font-package-specific($weight: 500, $color: hsl(hue($color-tertiary), saturation($color-tertiary) + 20%, lightness($color-tertiary) - 40%));
         @include laptop-screens{
@@ -29,13 +29,13 @@
         }
     }
     &-img{
-        height: 170px;
-        width: 100%;
+        height: $rest-card-img-height;
+        width: $rest-card-img-width;
         object-fit: cover;
-        border-radius: 25px 25px 0px 0px;
+        border-radius: $rest-card-bdradius $rest-card-bdradius 0px 0px;
         position: relative;
         @include laptop-screens{
-            height: 300px;
+            height: $laptop-restcard-img-height;
         }
     }
     &--old{
@@ -46,22 +46,27 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 10px 25px 10px 15px;
+        padding: $rest-card-padding-top_bottom $rest-card-padding-right $rest-card-padding-top_bottom $rest-card-padding-left;
         @include laptop-screens{
             padding-top: 15px;
         }
     }
+    &-txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 5px;
+    }
     &-header{
         @include font-package(global-card-header);
-        margin-bottom: 5px;
         @include laptop-screens{
-            font-size: 2.3rem;
+            @include font-package-laptop(global-card-header);
         }
     }
     &-location{
         @include font-package(standard);
         @include laptop-screens{
-            font-size: 2rem;
+            @include font-package-laptop(standard)
         }
     }
 }

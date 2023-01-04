@@ -1,22 +1,41 @@
 
 // PACKAGES DE POLICES
+    // -> Standards mobiles
 @mixin font-package($config: standard) {
     $package: map-get($font-package, $config);
     font: map-get($package, weight) map-get($package, size)+rem map-get($package, family),Arial, Verdana, sans-serif;
     color: map-get($package, color);
 }
-
+    // -> Tablettes
+@mixin font-package-touchpad($config: standard) {
+    $package: map-get($font-package-touchpad, $config);
+    font: map-get($package, weight) map-get($package, size)+rem map-get($package, family),Arial, Verdana, sans-serif;
+    color: map-get($package, color);
+}
+    // -> Ordinateurs
+@mixin font-package-laptop($config: standard) {
+    $package: map-get($font-package-laptop, $config);
+    font: map-get($package, weight) map-get($package, size)+rem map-get($package, family),Arial, Verdana, sans-serif;
+    color: map-get($package, color);
+}
+    // -> Spécifique, sur mesure
 @mixin font-package-specific($weight: map-get($font-standard-package, weight), $size: map-get($font-standard-package, size), $family: map-get($font-standard-package, family), $color: map-get($font-standard-package, color)){
     font: $weight #{$size}rem '#{$family}',Arial,Verdana,sans-serif; 
     color: $color;
 }
 
+// --------------------------------
 // MISE EN PAGE
 @mixin global-section-positionning($top: $general-top-padding, $right: $general-right_left-padding,$bottom: $general-bottom-padding, $left: $general-right_left-padding) {
     margin: 0 auto;
     padding: $top $right $bottom $left;
 }
-
+    // -- Mise en page ordinateurs --
+@mixin laptop-section-positionning($top: $general-top-padding, $right: $general-right_left-padding,$bottom: $general-bottom-padding, $left: $general-right_left-padding) {
+    margin: 0 auto;
+    padding: $top $right $bottom $left;
+}
+// --------------------------------
 // MEDIAS QUERIES
 @mixin bigmobiles-screens {
     @media screen and (min-width: map-get($breakpoints, big-mobiles)){
